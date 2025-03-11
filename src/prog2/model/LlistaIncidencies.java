@@ -1,6 +1,6 @@
 package prog2.model;
 
-import prog2.model.Allotjament.InLlistaAllotjaments;
+import prog2.model.allotjament.InLlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 
 public class LlistaIncidencies implements InLlistaAllotjaments {

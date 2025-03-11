@@ -1,4 +1,4 @@
-package prog2.model.Allotjament;
+package prog2.model.allotjament;
 
 import prog2.vista.ExcepcioCamping;
 
