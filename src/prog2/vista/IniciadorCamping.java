@@ -1,3 +1,5 @@
+package prog2.vista;
+
 /**
  *
  * @author lauraigual

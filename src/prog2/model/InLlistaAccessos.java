@@ -1,3 +1,5 @@
+package prog2.model;
+
 import prog2.vista.ExcepcioCamping;
 
 /**

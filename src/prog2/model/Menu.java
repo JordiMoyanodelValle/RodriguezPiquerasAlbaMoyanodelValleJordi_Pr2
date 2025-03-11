@@ -1,4 +1,4 @@
-/*
+package prog2.model;/*
  * Universitat de Barcelona
  * Programació 2
  */

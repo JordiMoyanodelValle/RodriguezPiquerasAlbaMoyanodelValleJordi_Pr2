@@ -1,3 +1,5 @@
+package prog2.model;
+
 import java.util.Scanner;
 
 /**
