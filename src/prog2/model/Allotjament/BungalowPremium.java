@@ -1,4 +1,4 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
 public class BungalowPremium extends Bungalow{
         //Definim els atributs i el constructor (si te super es perque herencia d'una clase superior)
@@ -6,7 +6,7 @@ public class BungalowPremium extends Bungalow{
         private String codiWifi;
 
 
-        public BungalowPremium(String nom, String id, String mida, int habitacions, int capacitat, int placesParking,
+        public BungalowPremium(String nom, String id, float mida, int habitacions, int capacitat, int placesParking,
                                boolean terrassa, boolean tv, boolean aireFred, boolean serveisExtra, String codiWifi) {
             super(nom, id, mida, habitacions, capacitat, placesParking, terrassa, tv, aireFred);
             this.serveisExtra = serveisExtra;

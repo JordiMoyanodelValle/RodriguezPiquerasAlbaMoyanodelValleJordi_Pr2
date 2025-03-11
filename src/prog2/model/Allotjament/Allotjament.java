@@ -1,6 +1,6 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
-import prog2.vista.ExcepcioReserva;
+import prog2.vista.ExcepcioCamping;
 import java.time.LocalDate;
 
 public class Allotjament implements InAllotjament {
@@ -38,60 +38,16 @@ public class Allotjament implements InAllotjament {
     public void setMida(float mida) {
         this.mida = mida;
     }
-
     public String getId() {
         return idAllotjament;
     }
-//Definim la funció amb la que sabrem si l'allotjament te un correcte funcionament , i el criteri de cada tipus de allotjament
-    public boolean correcteFuncionament() {
-
-        if (this instanceof Parcela) {
-            Parcela parcela = (Parcela) this;
-            return parcela.isConnexioElectrica();
-
-        }
-
-        else if (this instanceof Casa) {
-            Casa casa = (Casa) this;
-            if (casa instanceof MobilHome) {
-                MobilHome mobilHome = (MobilHome) casa;
-                return mobilHome.isTerrassaAmbBarbacoa();
-            }
 
 
-            else if (casa instanceof Glamping) {
-                Glamping glamping = (Glamping) casa;
-                return glamping.isCasaMascotes();
-            }
-
-
-            else if (casa instanceof Bungalow) {
-                Bungalow bungalow = (Bungalow) casa;
-                if (bungalow instanceof BungalowPremium) {
-                    BungalowPremium bungalowPre = (BungalowPremium) bungalow;
-                    return bungalowPre.getCodiWifi().length() >= 8 && bungalowPre.getCodiWifi().length() <= 16 && bungalowPre.isAireFred();
-                }
-                else { /* Si bungalow no és de tipus premium */
-                    return bungalow.isAireFred();
-                }
-            }
-
-            else { /* Si casa no és de cap dels tipus definits de Casa */
-                return false;
-            }
-        }
-
-        else { /* Si allotjament no és de cap dels tipus definits d'Allotjament */
-            return false;
-        }
-    }
-
-    /* He fet "if-else" ja que aquest codi només el cridem des del nostre codi (Camping.java)*/
     public long getEstadaMinima(Temp temp) {
         if (temp == Temp.ALTA) return this.estadaMinimaALTA;
         else return this.estadaMinimaBAIXA;
     }
-    //No son necessaris pero fa més rapids algunes altres funcions així no tenim que cridar a la funció getTemporada
+
     public long getEstadaMinimaTemporadaAlta() {
         return this.estadaMinimaALTA;
 
@@ -105,17 +61,15 @@ public class Allotjament implements InAllotjament {
         this.estadaMinimaBAIXA = estadaMinimaBAIXA_;
     }
 
-    // No hi habia cap funció per detectar la data actual
-
 
     // He afegit , per validar la estada depenen de quin dia comença aquesta.
-    public void validarEstada(LocalDate dataEntrada, LocalDate dataSortida) throws ExcepcioReserva {
+    public void validarEstada(LocalDate dataEntrada, LocalDate dataSortida) throws ExcepcioCamping {
         long dies = java.time.temporal.ChronoUnit.DAYS.between(dataEntrada, dataSortida);
         Temp temporada = Allotjament.getTemporada(dataEntrada);
         long estadaMinima = getEstadaMinima(temporada);
 
         if (dies < estadaMinima) {
-            throw new ExcepcioReserva("No compleixen l'estada mínima");
+            throw new ExcepcioCamping("No compleixen l'estada mínima");
         }
     }
     public String toString() {
