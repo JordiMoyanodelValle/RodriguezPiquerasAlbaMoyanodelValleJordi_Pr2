@@ -1,19 +1,19 @@
 package prog2.model;
 
-import prog2.vista.ExcepcioReserva;
+import prog2.vista.ExcepcioCamping;
 
 public class Client {
 
     private String nom;
     private String dni;
 
-    public Client(String nom , String dni) throws ExcepcioReserva {
+    public Client(String nom , String dni) throws ExcepcioCamping {
         this.nom = nom;
         if (dni.length() == 9) {
             this.dni = dni;
         }
         else {
-            throw new ExcepcioReserva("El DNI ha de tenir 9 caràcters.");
+            throw new ExcepcioCamping("El DNI ha de tenir 9 caràcters.");
         }
     }
 
