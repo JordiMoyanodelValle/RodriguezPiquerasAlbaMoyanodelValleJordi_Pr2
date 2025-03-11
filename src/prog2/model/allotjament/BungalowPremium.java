@@ -1,4 +1,4 @@
-package prog2.model.Allotjament;
+package prog2.model.allotjament;
 
 public class BungalowPremium extends Bungalow{
         //Definim els atributs i el constructor (si te super es perque herencia d'una clase superior)

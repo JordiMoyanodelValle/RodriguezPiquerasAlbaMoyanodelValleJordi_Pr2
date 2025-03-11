@@ -1,4 +1,4 @@
-package prog2.model.Acces;
+package prog2.model.acces;
 
 public class LlistaAccessos implements InAcces {
 

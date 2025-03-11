@@ -1,4 +1,4 @@
-package prog2.model.Allotjament;
+package prog2.model.allotjament;
 
 public class Glamping extends Casa{
 

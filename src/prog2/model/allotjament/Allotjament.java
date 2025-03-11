@@ -1,4 +1,4 @@
-package prog2.model.Allotjament;
+package prog2.model.allotjament;
 
 import prog2.vista.ExcepcioCamping;
 import java.time.LocalDate;
@@ -19,19 +19,16 @@ public class Allotjament implements InAllotjament {
         this.estadaMinimaBAIXA = EstadaMinimaBAIXA;
 
     }
-//Fem tots els getters i setters
+/*                               Getters i setters                            */
     public String getNom() {
         return this.nom;
     }
-
     public void setNom(String nom) {
         this.nom = nom;
     }
-
     public void setId(String id) {
         this.idAllotjament = id;
     }
-
     public float getMida(){
         return this.mida;
     }
@@ -41,21 +38,16 @@ public class Allotjament implements InAllotjament {
     public String getId() {
         return idAllotjament;
     }
-
-
     public long getEstadaMinima(Temp temp) {
         if (temp == Temp.ALTA) return this.estadaMinimaALTA;
         else return this.estadaMinimaBAIXA;
     }
-
     public long getEstadaMinimaTemporadaAlta() {
         return this.estadaMinimaALTA;
-
     }
     public long getEstadaMinimaTemporadaBaixa() {
         return this.estadaMinimaBAIXA;
     }
-
     public void setEstadaMinima(long estadaMinimaALTA_, long estadaMinimaBAIXA_) {
         this.estadaMinimaALTA = estadaMinimaALTA_;
         this.estadaMinimaBAIXA = estadaMinimaBAIXA_;
