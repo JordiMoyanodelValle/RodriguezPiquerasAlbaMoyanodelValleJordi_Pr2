@@ -1,4 +1,4 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
 public class Bungalow extends Casa {
     //Definim els atributs i el constructor (si te super es perque herencia d'una clase superior)

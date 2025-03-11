@@ -1,10 +1,10 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
 public class MobilHome extends Casa{
     //Definim els atributs i el constructor (si te super es perque herencia d'una clase superior)
     private boolean terrassaAmbBarbacoa;
 
-    public MobilHome(String nom, String id, String mida, int habitacions, int capacitat, boolean terrassaAmbBarbacoa) {
+    public MobilHome(String nom, String id, float mida, int habitacions, int capacitat, boolean terrassaAmbBarbacoa) {
         super(nom, id, mida, habitacions, capacitat,5,3);
         this.terrassaAmbBarbacoa = terrassaAmbBarbacoa;
     }

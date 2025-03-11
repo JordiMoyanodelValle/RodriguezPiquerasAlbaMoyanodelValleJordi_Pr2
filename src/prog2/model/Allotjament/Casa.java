@@ -1,4 +1,4 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
 public class Casa extends Allotjament{
 

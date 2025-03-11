@@ -1,4 +1,4 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
 /**
  * Interfície que defineix les operacions bàsiques per als allotjaments.

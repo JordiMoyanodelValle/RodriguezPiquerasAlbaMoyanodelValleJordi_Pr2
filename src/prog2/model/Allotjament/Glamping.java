@@ -1,11 +1,11 @@
-package prog2.model;
+package prog2.model.Allotjament;
 
 public class Glamping extends Casa{
 
     private String material;
     private boolean casaMascotas;
 
-    public Glamping(String nom, String idAllotjament, String mida, int habitacions, int capacitat, String material, boolean casaMascotas) {
+    public Glamping(String nom, String idAllotjament, float mida, int habitacions, int capacitat, String material, boolean casaMascotas) {
         super(nom, idAllotjament, mida, habitacions, capacitat,5,3);
         this.material = material;
         this.casaMascotas = casaMascotas;
