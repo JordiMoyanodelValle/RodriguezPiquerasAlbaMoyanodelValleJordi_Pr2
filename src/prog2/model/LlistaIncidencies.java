@@ -1,5 +1,6 @@
 package prog2.model;
 
+import prog2.model.allotjament.Allotjament;
 import prog2.model.allotjament.InLlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 

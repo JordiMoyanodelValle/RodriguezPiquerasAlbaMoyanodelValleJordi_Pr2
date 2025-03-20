@@ -2,11 +2,23 @@ package prog2.model.acces;
 
 import prog2.model.allotjament.Allotjament;
 
+import java.util.ArrayList;
+
 /**
  * Interfície que defineix les operacions bàsiques d'un accés.
  */
 public interface InAcces {
-    
+
+    String getNom();
+
+    void setNom(String nom);
+
+    boolean getAccessibilitat();
+
+    void setAccessibilitat(boolean accessibilitat);
+
+    ArrayList<Allotjament> getLlistaAllotjaments();
+
     /**
      * Afegeix un allotjament rebut com a paràmetre a la llista d'allotjaments de l'accés
      * @param allotjament
