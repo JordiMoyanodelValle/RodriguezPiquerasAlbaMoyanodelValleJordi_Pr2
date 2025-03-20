@@ -3,12 +3,13 @@ package prog2.model.allotjament;
 public class Glamping extends Casa{
 
     private String material;
-    private boolean casaMascotas;
+    private boolean casaMascotes;
 
-    public Glamping(String nom, String idAllotjament, float mida, int habitacions, int capacitat, String material, boolean casaMascotas) {
-        super(nom, idAllotjament, mida, habitacions, capacitat,5,3);
+    public Glamping(String nom, String idAllotjament, float mida, int habitacions, int placesPersones, long estadaMinimaALTA,
+                    long estadaMinimaBAIXA, boolean estat, String iluminacio, String material, boolean casaMascotes) {
+        super(nom, idAllotjament, mida, habitacions, placesPersones,5,3, estat, iluminacio);
         this.material = material;
-        this.casaMascotas = casaMascotas;
+        this.casaMascotes = casaMascotes;
     }
     //Fem tots els getters i setters
     public String getMaterial() {
@@ -20,11 +21,11 @@ public class Glamping extends Casa{
     }
 
     public boolean isCasaMascotes() {
-        return casaMascotas;
+        return casaMascotes;
     }
 
-    public void setCasaMascotas(boolean casaMascotas) {
-        this.casaMascotas = casaMascotas;
+    public void setCasaMascotes(boolean casaMascotes) {
+        this.casaMascotes = casaMascotes;
     }
 
 }

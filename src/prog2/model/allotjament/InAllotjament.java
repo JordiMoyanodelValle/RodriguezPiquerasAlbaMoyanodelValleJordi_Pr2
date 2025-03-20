@@ -1,5 +1,10 @@
 package prog2.model.allotjament;
 
+import prog2.model.Incidencia;
+import prog2.vista.ExcepcioCamping;
+
+import java.time.LocalDate;
+
 /**
  * Interfície que defineix les operacions bàsiques per als allotjaments.
  */
@@ -43,22 +48,38 @@ public interface InAllotjament {
      */
     void setEstadaMinima(long estadaMinimaALTA_, long estadaMinimaBAIXA_);
 
+    long getEstadaMinimaTemporadaAlta();
+
+    long getEstadaMinimaTemporadaBaixa();
+
     /**
      * Enumeració que representa les diferents temporades possibles.
      */
-    public enum Temp {
+    enum Temp {
         ALTA,
         BAIXA
     }
+
+    void setEstat(boolean estat);
+
+    boolean isEstat();
+
+    void setIluminacio(String iluminacio);
+
+    String getIluminacio();
 
     /**
      * Modifica l'estat de l'allotjament a No Operatiu i la il·luminació depenent de la incidència rebuda com a paràmetre
      * @param in Objecte de tipus Incidencia.
      */
-    public void tancarAllotjament(Incidencia in);
+    void tancarAllotjament(Incidencia in);
 
     /**
      * Modifica l'estat de l'allotjament a Operatiu i la il·luminació al 100%
      */
-    public void obrirAllotjament();
+    void obrirAllotjament();
+
+    void validarEstada(LocalDate dataEntrada, LocalDate dataSortida) throws ExcepcioCamping;
+
+    String toString();
 }

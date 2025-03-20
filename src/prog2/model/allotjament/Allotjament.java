@@ -1,5 +1,6 @@
 package prog2.model.allotjament;
 
+import prog2.model.Incidencia;
 import prog2.vista.ExcepcioCamping;
 import java.time.LocalDate;
 
@@ -10,13 +11,17 @@ public class Allotjament implements InAllotjament {
     private float mida;
     private long estadaMinimaALTA;
     private long estadaMinimaBAIXA;
+    private boolean estat;
+    private String iluminacio;  // No necessitem usar el seu valor numeric
 
-    public Allotjament (String nom, String idAllotjament,float mida, long EstadaMinimaALTA, long EstadaMinimaBAIXA) {
+    public Allotjament (String nom, String idAllotjament, float mida, long EstadaMinimaALTA, long EstadaMinimaBAIXA , boolean estat, String iluminacio) {
         this.nom = nom;
         this.idAllotjament = idAllotjament;
         this.mida = mida;
         this.estadaMinimaALTA = EstadaMinimaALTA;
         this.estadaMinimaBAIXA = EstadaMinimaBAIXA;
+        this.estat = estat;
+        this.iluminacio = iluminacio;
 
     }
 /*                               Getters i setters                            */
@@ -51,6 +56,30 @@ public class Allotjament implements InAllotjament {
     public void setEstadaMinima(long estadaMinimaALTA_, long estadaMinimaBAIXA_) {
         this.estadaMinimaALTA = estadaMinimaALTA_;
         this.estadaMinimaBAIXA = estadaMinimaBAIXA_;
+    }
+
+    public void setEstat(boolean estat) {
+        this.estat = estat;
+    }
+
+    public boolean isEstat() {
+        return this.estat;
+    }
+
+    public void setIluminacio(String iluminacio) {
+        this.iluminacio = iluminacio;
+    }
+
+    public String getIluminacio() {
+        return this.iluminacio;
+    }
+
+    public void tancarAllotjament(Incidencia in) {
+
+    }
+
+    public void obrirAllotjament() {
+
     }
 
 

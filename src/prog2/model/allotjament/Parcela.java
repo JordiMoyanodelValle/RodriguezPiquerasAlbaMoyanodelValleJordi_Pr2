@@ -4,10 +4,10 @@ public class Parcela extends Allotjament {
     //Definim els atributs i el constructor (si te super es perque herencia d'una clase superior)
     private boolean connexioElectrica;
 
-
-    public Parcela (String nom, String idAllotjament,float mida, boolean conexioElectrica){
-        super(nom, idAllotjament, mida, 4, 2);
-        this.connexioElectrica = conexioElectrica;
+    public Parcela (String nom, String idAllotjament, float mida, boolean connexioElectrica, long estadaMinimaALTA,
+                    long estadaMinimaBAIXA, boolean estat, String iluminacio){
+        super(nom, idAllotjament, mida, 4, 2, estat, iluminacio);
+        this.connexioElectrica = connexioElectrica;
     }
     //Fem tots els getters i setters
 

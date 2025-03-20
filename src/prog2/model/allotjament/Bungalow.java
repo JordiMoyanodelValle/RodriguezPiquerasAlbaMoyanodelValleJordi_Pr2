@@ -2,27 +2,27 @@ package prog2.model.allotjament;
 
 public class Bungalow extends Casa {
     //Definim els atributs i el constructor (si te super es perque herencia d'una clase superior)
-    private int placesParquing;
+    private int placesParking;
     private boolean terrassa;
     private boolean tv;
     private boolean aireFred;
 
-
-    public Bungalow (String nom, String Id, float mida , int capacitat,
-                     int habitacions , int placesParquing, boolean terrassa, boolean tv, boolean aireFred) {
-        super(nom, Id, mida, capacitat, habitacions,7,4);
-        this.placesParquing = placesParquing;
+    public Bungalow (String nom, String idAllotjament, float mida, int habitacions, int placesPersones, long estadaMinimaALTA,
+                     long estadaMinimaBAIXA, boolean estat, String iluminacio, int placesParking, boolean terrassa, boolean tv, boolean aireFred) {
+        super (nom, idAllotjament, mida, habitacions, placesPersones, 7, 4, estat, iluminacio);
+        this.placesParking = placesParking;
         this.terrassa = terrassa;
         this.tv = tv;
         this.aireFred = aireFred;
     }
+
     //Fem tots els getters i setters
     public int getPlacesParquing() {
-        return placesParquing;
+        return placesParking;
     }
 
     public void setPlacesParquing(int placesParquing) {
-        this.placesParquing = placesParquing;
+        this.placesParking = placesParquing;
     }
 
     public boolean isTerrassa() {
