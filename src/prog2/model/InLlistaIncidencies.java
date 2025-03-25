@@ -26,7 +26,7 @@ public interface InLlistaIncidencies {
     * @throws ExcepcioCamping
      */
     public void eliminarIncidencia(Incidencia in) throws ExcepcioCamping;
-    
+
     /**
      * Itera sobre la llista d'incidències i retorna un String amb la informació de totes les incidències. 
      * En cas que no hi hagi cap incidència llança una excepció. 

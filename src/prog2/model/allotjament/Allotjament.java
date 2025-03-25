@@ -57,6 +57,9 @@ public class Allotjament implements InAllotjament {
         this.estadaMinimaALTA = estadaMinimaALTA_;
         this.estadaMinimaBAIXA = estadaMinimaBAIXA_;
     }
+    public boolean isOperatiu() {
+        return estat;
+    }
 
     public void setEstat(boolean estat) {
         this.estat = estat;

@@ -8,8 +8,8 @@ public class AccesTerra extends Acces {
 
     private int longitud;
 
-    public AccesTerra (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments, int longitud) {
-        super (nom, accessibilitat, LlistaAllotjaments);
+    public AccesTerra (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int longitud) {
+        super (nom, accessibilitat, LlistaAllotjaments, estat);
         this.longitud = longitud;
 
     }

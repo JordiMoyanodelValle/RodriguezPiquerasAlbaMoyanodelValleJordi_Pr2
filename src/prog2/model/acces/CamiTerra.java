@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 public class CamiTerra extends AccesTerra {
 
-    public CamiTerra(String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments, int longitud) {
-        super(nom, false, LlistaAllotjaments, longitud);
+    public CamiTerra(String nom, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int longitud) {
+        super(nom, false, LlistaAllotjaments,estat, longitud);
     }
 
 }
