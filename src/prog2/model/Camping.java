@@ -1,11 +1,24 @@
 package prog2.model;
 
+import prog2.model.acces.LlistaAccessos;
+import prog2.model.allotjament.LlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 
 public class Camping implements InCamping{
+    private String nom;
+    private LlistaIncidencies incidencias;
+    private LlistaAllotjaments allotjament;
+    private LlistaAccessos accessos;
+
+    Camping (String nom){
+        this.nom = nom;
+        incidencias = new LlistaIncidencies();
+        allotjament = new LlistaAllotjaments();
+        accessos = new LlistaAccessos();
+    }
 
     public String getNomCamping() {
-        return "";
+        return this.nom ;
     }
 
     public String llistarAllotjaments(String estat) throws ExcepcioCamping {

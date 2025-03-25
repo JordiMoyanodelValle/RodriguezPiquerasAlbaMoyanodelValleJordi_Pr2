@@ -5,7 +5,11 @@ import prog2.vista.ExcepcioCamping;
 import java.util.ArrayList;
 
 public class LlistaAllotjaments implements InLlistaAllotjaments {
-    ArrayList<Allotjament> llistaallotjaments = new ArrayList<Allotjament>();
+    private ArrayList<Allotjament> llistaallotjaments ;
+
+    public LlistaAllotjaments() {
+        ArrayList<Allotjament> llistaallotjaments;
+    }
 
     public void afegirAllotjament(Allotjament allotjament) throws ExcepcioCamping {
         llistaallotjaments.add(allotjament);

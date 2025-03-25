@@ -11,6 +11,10 @@ import java.util.ArrayList;
 public class LlistaAccessos implements InLlistaAccessos {
     ArrayList<Acces> llistaAccessos;
 
+    public LlistaAccessos() {
+        llistaAccessos = new ArrayList<Acces>();
+    }
+
     public void afegirAcces(Acces acc) throws ExcepcioCamping {
         llistaAccessos.add(acc);
     }

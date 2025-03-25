@@ -1,32 +1,47 @@
 package prog2.model;
 
+import prog2.model.Incidencia;
 import prog2.model.allotjament.Allotjament;
-import prog2.model.allotjament.InLlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 
-public class LlistaIncidencies implements InLlistaAllotjaments {
+import java.util.ArrayList;
+import static prog2.model.Incidencia.convertirTipus;
 
-    public void afegirAllotjament(Allotjament allotjament) throws ExcepcioCamping {
+public class LlistaIncidencies implements InLlistaIncidencies {
+    private ArrayList<Incidencia> incidencies;
 
+    public LlistaIncidencies() {
+        incidencies = new ArrayList<Incidencia>();
     }
-
-    public void buidar() {
-
+    public void afegirIncidencia(int idIncidencia, String tipus, Allotjament allotjament, String data) {
+        incidencies.add(new Incidencia(idIncidencia, convertirTipus(tipus),allotjament,data));
     }
-
-    public String llistarAllotjaments(String estat) throws ExcepcioCamping {
-        return "";
+    public void eliminarIncidencia(Incidencia in) throws ExcepcioCamping{
+        incidencies.remove(in);
     }
+    public String llistarIncidencies() throws ExcepcioCamping{
+        StringBuffer bf = new StringBuffer();
+        if (incidencies.isEmpty()) {
+            throw new ExcepcioCamping("La llista d'incidencies esta vuida");
+        }
+        else{
+            for (Incidencia incidencia : incidencies) {
+                bf.append(incidencia.toString());bf.append("\n");
+            }
 
-    public boolean containsAllotjamentOperatiu() {
-        return false;
+        }
+        return bf.toString();
     }
-
-    public boolean contains(Allotjament allotjament) {
-        return false;
-    }
-
-    public Allotjament getAllotjament(String nom) throws ExcepcioCamping {
+    public Incidencia getIncidencia(int idIncidencia) {
+        for (Incidencia incidencia : incidencies) {
+            if (incidencia.getIdInceidencia() == idIncidencia) {
+                return incidencia;
+            }
+        }
         return null;
     }
+
+
+
+
 }
