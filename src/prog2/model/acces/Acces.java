@@ -49,9 +49,11 @@ public class Acces implements InAcces {
     public void obrirAcces() {
         this.estat = true;
     }
+    public boolean getEstat(){
+        return estat;
+    }
 
     public boolean isAccessibilitat() {
-
-        return false;
+        return accessibilitat;
     }
 }

@@ -45,9 +45,9 @@ public class LlistaAllotjaments implements InLlistaAllotjaments {
         return false;
     }
 
-    public Allotjament getAllotjament(String nom) throws ExcepcioCamping {
+    public Allotjament getAllotjament(String id) throws ExcepcioCamping {
         for (Allotjament allotjament : llistaallotjaments) {
-            if (allotjament.getNom().equals(nom)) {
+            if (allotjament.getId().equals(id)) {
                 return allotjament;
             }
         }

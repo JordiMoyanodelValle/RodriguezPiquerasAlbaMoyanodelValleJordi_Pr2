@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class CamiAsfalt extends AccesAsfalt {
 
-    public CamiAsfalt(String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int metresQuadrats) {
+    public CamiAsfalt(String nom, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int metresQuadrats) {
         super (nom, false, LlistaAllotjaments,estat, metresQuadrats);
     }
 }

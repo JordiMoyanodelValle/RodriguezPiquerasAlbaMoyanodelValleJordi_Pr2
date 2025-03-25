@@ -8,7 +8,7 @@ public class CarreteraTerra extends AccesTerra {
 
     private int amplada;
 
-    public CarreteraTerra(String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int longitud, int amplada) {
+    public CarreteraTerra(String nom, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int longitud, int amplada) {
         super(nom, true, LlistaAllotjaments,estat, longitud);
         this.amplada = amplada;
     }
