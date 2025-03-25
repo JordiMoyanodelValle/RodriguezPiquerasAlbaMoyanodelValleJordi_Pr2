@@ -1,35 +1,24 @@
 package prog2.model.acces;
 
-import prog2.model.allotjament.Allotjament;
+import prog2.model.acces.Acces;
 import prog2.vista.ExcepcioCamping;
 
+import java.util.ArrayList;
+
+
 public class LlistaAccessos implements InLlistaAccessos {
-
-    public void afegirAllotjament(Allotjament allotjament) {
-
-    }
-
-    public void tancarAcces() {
-
-    }
-
-    public void obrirAcces() {
-
-    }
-
-    public boolean isAccessibilitat() {
-        return false;
-    }
+    ArrayList<Acces> llistaAccessos;
 
     public void afegirAcces(Acces acc) throws ExcepcioCamping {
-
+        llistaAccessos.add(acc);
     }
 
     public void buidar() {
-
+        llistaAccessos.clear();
     }
 
     public String llistarAccessos(boolean estat) throws ExcepcioCamping {
+        for (Acces acc : llistaAccessos) {}
         return "";
     }
 
@@ -42,6 +31,8 @@ public class LlistaAccessos implements InLlistaAccessos {
     }
 
     public float calculaMetresQuadratsAsfalt() throws ExcepcioCamping {
-        return 0;
+        for (Acces acces : llistaAccessos){
+
+        }
     }
 }

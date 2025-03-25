@@ -8,8 +8,8 @@ public class AccesAsfalt extends Acces{
 
     private int metresQuadrats;
 
-    public AccesAsfalt (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments, int metresQuadrats) {
-        super (nom, accessibilitat, LlistaAllotjaments);
+    public AccesAsfalt (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int metresQuadrats) {
+        super (nom, accessibilitat, LlistaAllotjaments, estat);
         this.metresQuadrats = metresQuadrats;
 
     }

@@ -8,8 +8,8 @@ public class CarreteraAsfalt extends AccesAsfalt {
 
     private int pesMax;
 
-    public CarreteraAsfalt(String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments, int metresQuadrats, int pesMax) {
-        super (nom, true, LlistaAllotjaments, metresQuadrats);
+    public CarreteraAsfalt(String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int metresQuadrats, int pesMax) {
+        super (nom, true, LlistaAllotjaments,estat, metresQuadrats);
         this.pesMax = pesMax;
     }
 

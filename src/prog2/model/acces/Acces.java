@@ -9,11 +9,13 @@ public class Acces implements InAcces {
     private String nom;
     private boolean accessibilitat;
     private ArrayList<Allotjament> LlistaAllotjaments;
+    private boolean estat;
 
-    public Acces (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments) {
+    public Acces (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments, boolean estat) {
         this.nom = nom;
         this.accessibilitat = accessibilitat;
         this.LlistaAllotjaments = LlistaAllotjaments;
+        this.estat = estat;
     }
 
     public String getNom() {
@@ -37,18 +39,19 @@ public class Acces implements InAcces {
     }
 
     public void afegirAllotjament(Allotjament allotjament) {
-
+        LlistaAllotjaments.add(allotjament);
     }
 
     public void tancarAcces() {
-
+        this.estat = false;
     }
 
     public void obrirAcces() {
-
+        this.estat = true;
     }
 
     public boolean isAccessibilitat() {
+
         return false;
     }
 }
