@@ -5,6 +5,8 @@ import prog2.model.allotjament.Allotjament;
 import prog2.model.allotjament.LlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 
+import static prog2.model.Incidencia.convertirTipus;
+
 public class Camping implements InCamping{
     private String nom;
     private LlistaIncidencies llistaIncidencies;
@@ -35,14 +37,11 @@ public class Camping implements InCamping{
     }
 
     public void afegirIncidencia(int num, String tipus, String idAllotjament, String data) throws ExcepcioCamping {
-        for (Allotjament allotjament : llistaAllotjaments){
-
-        }
-        llistaIncidencies.afegirIncidencia(num, tipus, , data);
+        llistaIncidencies.afegirIncidencia(num,tipus,llistaAllotjaments.getAllotjament(idAllotjament), data);
     }
 
     public void eliminarIncidencia(int num) throws ExcepcioCamping {
-
+        llistaIncidencies.eliminarIncidencia(llistaIncidencies.getIncidencia(num));
     }
 
     public int calculaAccessosAccessibles() {
