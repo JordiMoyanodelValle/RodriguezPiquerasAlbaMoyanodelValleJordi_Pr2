@@ -13,11 +13,21 @@ public class LlistaIncidencies implements InLlistaIncidencies {
     public LlistaIncidencies() {
         incidencies = new ArrayList<Incidencia>();
     }
-    public void afegirIncidencia(int idIncidencia, String tipus, Allotjament allotjament, String data) {
+
+    public void afegirIncidencia(int idIncidencia, String tipus, Allotjament allotjament, String data) throws ExcepcioCamping {
+        boolean YaTeIncidencia = false;
+        for (Incidencia incidencia : incidencies) {
+            if (incidencia.getAllotjament().equals(allotjament)) {
+                throw new ExcepcioCamping("L'allotjament ja te una incidencia");
+            }
+        }
         incidencies.add(new Incidencia(idIncidencia, convertirTipus(tipus),allotjament,data));
     }
     public void eliminarIncidencia(Incidencia in) throws ExcepcioCamping{
+        Allotjament allotjament = in.getAllotjament();
         incidencies.remove(in);
+        allotjament.isOperatiu();
+
     }
     public String llistarIncidencies() throws ExcepcioCamping{
         StringBuffer bf = new StringBuffer();

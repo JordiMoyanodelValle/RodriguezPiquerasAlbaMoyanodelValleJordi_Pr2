@@ -1,20 +1,21 @@
 package prog2.model;
 
 import prog2.model.acces.LlistaAccessos;
+import prog2.model.allotjament.Allotjament;
 import prog2.model.allotjament.LlistaAllotjaments;
 import prog2.vista.ExcepcioCamping;
 
 public class Camping implements InCamping{
     private String nom;
-    private LlistaIncidencies incidencias;
-    private LlistaAllotjaments allotjament;
-    private LlistaAccessos accessos;
+    private LlistaIncidencies llistaIncidencies;
+    private LlistaAllotjaments llistaAllotjaments;
+    private LlistaAccessos llistaAccessos;
 
     Camping (String nom){
         this.nom = nom;
-        incidencias = new LlistaIncidencies();
-        allotjament = new LlistaAllotjaments();
-        accessos = new LlistaAccessos();
+        this.llistaIncidencies = new LlistaIncidencies();
+        this.llistaAllotjaments = new LlistaAllotjaments();
+        this.llistaAccessos = new LlistaAccessos();
     }
 
     public String getNomCamping() {
@@ -22,19 +23,22 @@ public class Camping implements InCamping{
     }
 
     public String llistarAllotjaments(String estat) throws ExcepcioCamping {
-        return "";
+        return llistarAllotjaments(estat);
     }
 
     public String llistarAccessos(String infoEstat) throws ExcepcioCamping {
-        return "";
+        return llistarAccessos(infoEstat);
     }
 
     public String llistarIncidencies() throws ExcepcioCamping {
-        return "";
+        return llistarIncidencies();
     }
 
     public void afegirIncidencia(int num, String tipus, String idAllotjament, String data) throws ExcepcioCamping {
+        for (Allotjament allotjament : llistaAllotjaments){
 
+        }
+        llistaIncidencies.afegirIncidencia(num, tipus, , data);
     }
 
     public void eliminarIncidencia(int num) throws ExcepcioCamping {

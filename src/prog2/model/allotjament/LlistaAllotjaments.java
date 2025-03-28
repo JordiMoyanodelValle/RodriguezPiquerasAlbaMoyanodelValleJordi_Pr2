@@ -1,5 +1,6 @@
 package prog2.model.allotjament;
 
+import prog2.model.allotjament.Allotjament;
 import prog2.vista.ExcepcioCamping;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ public class LlistaAllotjaments implements InLlistaAllotjaments {
     private ArrayList<Allotjament> llistaallotjaments ;
 
     public LlistaAllotjaments() {
-        ArrayList<Allotjament> llistaallotjaments;
+        llistaallotjaments = new ArrayList<Allotjament>();
     }
 
     public void afegirAllotjament(Allotjament allotjament) throws ExcepcioCamping {
