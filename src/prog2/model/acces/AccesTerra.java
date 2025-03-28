@@ -6,19 +6,19 @@ import java.util.ArrayList;
 
 public class AccesTerra extends Acces {
 
-    private int longitud;
+    private float longitud;
 
-    public AccesTerra (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int longitud) {
-        super (nom, accessibilitat, LlistaAllotjaments, estat);
+    public AccesTerra (String nom, boolean accessibilitat,boolean estat,float longitud) {
+        super (nom, accessibilitat, estat);
         this.longitud = longitud;
 
     }
 
-    public int getLongitud() {
+    public float getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(int longitud) {
+    public void setLongitud(float longitud) {
         this.longitud = longitud;
     }
 

@@ -11,10 +11,10 @@ public class Acces implements InAcces {
     private ArrayList<Allotjament> LlistaAllotjaments;
     private boolean estat;
 
-    public Acces (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments, boolean estat) {
+    public Acces (String nom, boolean accessibilitat, boolean estat) {
         this.nom = nom;
         this.accessibilitat = accessibilitat;
-        this.LlistaAllotjaments = LlistaAllotjaments;
+        this.LlistaAllotjaments = new ArrayList<Allotjament>();
         this.estat = estat;
     }
 

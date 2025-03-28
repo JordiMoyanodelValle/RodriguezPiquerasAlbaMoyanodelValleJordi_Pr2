@@ -6,18 +6,18 @@ import java.util.ArrayList;
 
 public class CarreteraTerra extends AccesTerra {
 
-    private int amplada;
+    private float amplada;
 
-    public CarreteraTerra(String nom, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int longitud, int amplada) {
-        super(nom, true, LlistaAllotjaments,estat, longitud);
+    public CarreteraTerra(String nom,boolean estat, float longitud, float amplada) {
+        super(nom, true,estat, longitud);
         this.amplada = amplada;
     }
 
-    public int getAmplada() {
+    public float getAmplada() {
         return amplada;
     }
 
-    public void setAmplada(int amplada) {
+    public void setAmplada(float amplada) {
         this.amplada = amplada;
     }
 }

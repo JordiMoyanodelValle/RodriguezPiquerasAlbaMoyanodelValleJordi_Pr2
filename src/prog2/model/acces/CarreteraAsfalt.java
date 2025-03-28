@@ -6,14 +6,14 @@ import java.util.ArrayList;
 
 public class CarreteraAsfalt extends AccesAsfalt {
 
-    private int pesMax;
+    private float pesMax;
 
-    public CarreteraAsfalt(String nom, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int metresQuadrats, int pesMax) {
-        super (nom, true, LlistaAllotjaments,estat, metresQuadrats);
+    public CarreteraAsfalt(String nom,boolean estat, float metresQuadrats, float pesMax) {
+        super (nom, true,estat, metresQuadrats);
         this.pesMax = pesMax;
     }
 
-    public int getPesMax() {
+    public float getPesMax() {
         return pesMax;
     }
 

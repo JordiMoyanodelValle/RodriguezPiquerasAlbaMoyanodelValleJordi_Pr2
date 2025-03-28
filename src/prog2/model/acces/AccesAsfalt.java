@@ -6,19 +6,19 @@ import java.util.ArrayList;
 
 public class AccesAsfalt extends Acces{
 
-    private int metresQuadrats;
+    private float metresQuadrats;
 
-    public AccesAsfalt (String nom, boolean accessibilitat, ArrayList<Allotjament> LlistaAllotjaments,boolean estat, int metresQuadrats) {
-        super (nom, accessibilitat, LlistaAllotjaments, estat);
+    public AccesAsfalt (String nom, boolean accessibilitat,boolean estat, float metresQuadrats) {
+        super (nom, accessibilitat, estat);
         this.metresQuadrats = metresQuadrats;
 
     }
 
-    public int getMetresQuadrats() {
+    public float getMetresQuadrats() {
         return metresQuadrats;
     }
 
-    public void setMetresQuadrats(int metresQuadrats) {
+    public void setMetresQuadrats(float metresQuadrats) {
         this.metresQuadrats = metresQuadrats;
     }
     public String toString() {
