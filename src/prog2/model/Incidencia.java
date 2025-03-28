@@ -55,4 +55,19 @@ public class Incidencia {
             throw new IllegalArgumentException("Error: Tipus d'incidència no vàlid: " + tipus);
         }
     }
+    public String getIluminacioAllotjament() {
+        switch (Tipus) {
+            case REPARACIO:
+                return "100% d'il·luminació";
+            case NETEJA:
+                return "50% d'il·luminació";
+            case TANCAMENT:
+                return "0% d'il·luminació";
+            default:
+                return "Il·luminació desconeguda";
+        }
+    }
+
+
+
 }

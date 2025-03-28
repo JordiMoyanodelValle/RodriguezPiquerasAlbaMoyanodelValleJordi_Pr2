@@ -21,4 +21,7 @@ public class AccesAsfalt extends Acces{
     public void setMetresQuadrats(int metresQuadrats) {
         this.metresQuadrats = metresQuadrats;
     }
+    public String toString() {
+        return super.toString() + " | Metres quadrats: " + metresQuadrats;
+    }
 }

@@ -21,4 +21,9 @@ public class AccesTerra extends Acces {
     public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
+
+    public String toString() {
+        return super.toString() + " | Longitud: " + longitud;
+    }
 }
+

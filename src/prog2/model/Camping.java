@@ -38,18 +38,24 @@ public class Camping implements InCamping{
 
     public void afegirIncidencia(int num, String tipus, String idAllotjament, String data) throws ExcepcioCamping {
         llistaIncidencies.afegirIncidencia(num,tipus,llistaAllotjaments.getAllotjament(idAllotjament), data);
+        llistaAllotjaments.getAllotjament(idAllotjament).tancarAllotjament(llistaIncidencies.getIncidencia(num));
+        llistaAccessos.actualitzaEstatAccessos();
     }
 
     public void eliminarIncidencia(int num) throws ExcepcioCamping {
-        llistaIncidencies.eliminarIncidencia(llistaIncidencies.getIncidencia(num));
+        Incidencia incidencia = llistaIncidencies.getIncidencia(num);
+        incidencia.getAllotjament().obrirAllotjament();
+        llistaAccessos.actualitzaEstatAccessos();
+        llistaIncidencies.eliminarIncidencia(incidencia);
+
     }
 
-    public int calculaAccessosAccessibles() {
-        return 0;
+    public int calculaAccessosAccessibles(){
+        return llistaAccessos.calculaAccessosAccessibles();
     }
 
     public float calculaMetresQuadratsAsfalt() {
-        return 0;
+        return llistaAccessos.calculaMetresQuadratsAsfalt();
     }
 
     public void save(String camiDesti) throws ExcepcioCamping {

@@ -40,12 +40,12 @@ public interface InLlistaAccessos {
      * @return int
      * @throws prog2.vista.ExcepcioCamping Aquest mètode podria llançar una excepció si fos necessari.
      */
-     public int calculaAccessosAccessibles() throws ExcepcioCamping;
+     public int calculaAccessosAccessibles();
      
      /**
      * Itera sobre la llista d'accessos, i pels accessos asfaltats suma els metres quadrats d'asfalt i ho retorna.
      * @return float amb els metres quadrats d'asfalt.
      * @throws prog2.vista.ExcepcioCamping Aquest mètode podria llançar una excepció si fos necessari.
      */
-     public float calculaMetresQuadratsAsfalt() throws ExcepcioCamping;
+     public float calculaMetresQuadratsAsfalt();
 }

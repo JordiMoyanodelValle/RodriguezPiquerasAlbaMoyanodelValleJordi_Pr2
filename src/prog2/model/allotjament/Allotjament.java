@@ -78,11 +78,13 @@ public class Allotjament implements InAllotjament {
     }
 
     public void tancarAllotjament(Incidencia in) {
-
+        this.estat = false;
+        this.iluminacio= in.getIluminacioAllotjament();
     }
 
     public void obrirAllotjament() {
-
+        this.estat = true;
+        this.iluminacio = "100%";
     }
 
 
@@ -97,10 +99,15 @@ public class Allotjament implements InAllotjament {
         }
     }
     public String toString() {
-        return "Nom=" + nom + ", Id=" + idAllotjament +
-                ", estada mínima en temp ALTA: " + this.estadaMinimaALTA +
-                ", estada mínima en temp BAIXA: " + this.estadaMinimaBAIXA + ".";
+        return "Allotjament [nom=" + nom +
+                ", idAllotjament=" + idAllotjament +
+                ", mida=" + mida + " m²" +
+                ", estada mínima en temporada alta=" + estadaMinimaALTA + " días" +
+                ", estada mínima en temporada baixa=" + estadaMinimaBAIXA + " días" +
+                ", estat=" + (estat ? "Operatiu" : "No operatiu") +
+                ", iluminació=" + iluminacio + "]";
     }
+
     public static Temp getTemporada(LocalDate data){
         int dia = data.getDayOfMonth();
         int mes = data.getMonthValue();
