@@ -12,7 +12,7 @@ public class Camping implements InCamping {
     private LlistaAllotjaments llistaAllotjaments;
     private LlistaAccessos llistaAccessos;
 
-    Camping(String nom) {
+    public Camping(String nom) {
         this.nom = nom;
         this.llistaIncidencies = new LlistaIncidencies();
         this.llistaAllotjaments = new LlistaAllotjaments();
@@ -21,6 +21,10 @@ public class Camping implements InCamping {
 
     public String getNomCamping() {
         return this.nom;
+    }
+
+    public void setNomCamping(String nom) {
+        this.nom = nom;
     }
 
     public String llistarAllotjaments(String estat) throws ExcepcioCamping {
